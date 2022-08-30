@@ -1,9 +1,9 @@
 //Variables
-let entradasEventoA = "La renga"
+let entradasEventoA = "la renga"
 let precioEntradasEventoA = 1000
 let stockEntradasEventoA = 10
 
-let entradasEventoB = "Divididos"
+let entradasEventoB = "divididos"
 let precioEntradasEventoB = 3000
 let stockEntradasEventoB = 10
 let cantidadComprada  //?
@@ -41,7 +41,7 @@ let cantidadDeLaCompra = parseInt(prompt("Hola " + nombreUsuario + "! indique de
 if (cantidadDeLaCompra <= 2){
 
 for(let i = 0; i < cantidadDeLaCompra; i++){
-    let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar").toLocaleLowerCase()
+    let nombreCompra = prompt("Ingrese el nombre del artista que quiere comprar").toLowerCase()
     if (nombreCompra === entradasEventoA){
         compra (precioEntradasEventoA, entradasEventoA, stockEntradasEventoA)
     }
