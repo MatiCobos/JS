@@ -1,4 +1,35 @@
-class Entradas {
+const products = [
+    {id: 1, name: "Product 1", price: 100, img: "/public/awayShirt.jpg", description: "This product will be available soon", stock: 1},
+    {id: 2, name: "Product 2", price: 200, img: "/public/awayShirt.jpg", description: "This product will be available soon", stock: 2},
+    {id: 3, name: "Product 3", price: 300, img: "/public/awayShirt.jpg", description: "This product will be available soon", stock: 3},
+    {id: 4, name: "Product 4", price: 400, img: "/public/awayShirt.jpg", description: "This product will be available soon", stock: 4}
+];
+
+for (const product of products) {
+    let contenedor = document.getElementById("container");
+    let card = document.createElement("div");
+    /* card.classList.add() */
+    card.innerHTML = `<div class="card" style="width: 18rem;">
+                        <img src="${product.img}" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <h5 class="card-title">${product.name}</h5>
+                            <p>$${product.price}</p>
+                            <p class="card-text">${product.description}.</p>
+                            <a href="#" class="btn btn-primary" onClick="addToCart()">Add to cart</a>
+                        </div>
+                    </div>`;
+    contenedor.append(card);
+
+}
+
+
+const addToCart = () => {
+    alert(`shopping cart coming soon`)
+}
+
+
+
+/* class Entradas {
     constructor(nombreValor, precioValor, stockValor) {
         this.nombre = nombreValor;
         this.precio = precioValor;
@@ -6,27 +37,23 @@ class Entradas {
     }
 }
 
-class Usuarios {
-    constructor(nombreUsuario) {
-        this.nombre = nombreUsuario;
-    }
-
-}
 
 const eventoA = new Entradas("La renga", 1000, 10);
 const eventoB = new Entradas("Divididos", 3000, 10);
 
 
 const listaEntradas = [eventoA, eventoB];
+ */
 
 
-let cantidadComprada = 0;
+
+/*let cantidadComprada = 0;
 let precioTotal = 0;
 
 let contador = 0;
 let listaArtistas = "Hola bienvenido! acá vendemos entradas para estos artistas: ";
 
-for (const artista of listaEntradas) {
+ for (const artista of listaEntradas) {
     contador++;
     listaArtistas += "\n" + contador + " " + artista.nombre;
 }
@@ -83,4 +110,4 @@ else {
     alert("Solo tenemos para dos artistas");
 
 }
-alert("Muchas gracias por tu compra! Su saldo a pagar es: \n" + "$" + precioTotal);
+alert("Muchas gracias por tu compra! Su saldo a pagar es: \n" + "$" + precioTotal); */
