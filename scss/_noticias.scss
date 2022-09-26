@@ -1,0 +1,121 @@
+*{
+    font-family: 'Noto Sans TC', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: black !important;
+    font-family: 'Noto Sans TC', sans-serif;
+    font-weight: bold;
+
+}
+
+p{
+    color: brown;
+}
+.encabezado{
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+    background-color: black;
+    margin: 0 0 60px;
+    text-align: center;
+}
+#estilos-link{
+    text-decoration: none;
+    color: white;
+}
+
+.parrafo-noticias{
+    padding: 50px;
+    text-align: left;
+
+
+    
+}
+
+.rounded-pill{
+    background-color: black;
+    border: solid white;
+}
+
+.rounded-pill:hover{
+    background-color: brown;
+    color: black;
+    border: solid black;
+}
+
+.hr {
+    margin: 0rem 0;
+    color: inherit;
+    background-color: currentColor;
+    border: 0;
+    opacity: .25
+}
+
+.noticia-principal{
+    background-color: black;
+    padding: 20px;
+    div{
+        h6{
+            color: white;
+            text-align: center;
+            
+
+            
+        }
+    }
+
+    
+}
+
+.foto-main {
+    width: 100%;
+    height: auto;
+    margin: 0 0 60px;
+    
+}
+
+.spotify{
+    padding: 20px;
+    display: flex;
+    .ratio-4x3{
+        height: 300px !important;
+        margin: 0px 20px 0px 0px;
+        border: solid white !important;
+    }
+}
+
+.bi-twitter:hover{
+    color: #00acee;
+}
+.bi-facebook:hover{
+    color: #3b5998
+}
+
+.bi-instagram:hover{
+    color: violet;
+}
+.btn-light:hover{
+    background-color: white !important;
+    color: black !important;
+}
+
+.social-media{
+    display: flex;
+    padding: 0px 0px 0px 50px;
+    font-size: 12px;
+    .twitter-noticias{
+        padding: 0px 10px 0px 10px;
+    }
+}
+
+.pie-de-foto{
+    padding: 0px 50px 0px 0px;
+    margin: 0px;
+}
+
+
+
+

@@ -1,0 +1,32 @@
+footer{
+    color: white;
+    display: flex;
+    justify-content: center;
+    background: linear-gradient(90deg, rgba(121,9,9,1) 0%, rgba(0,0,0,1) 45%);
+
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+
+}
+
+ul{
+    padding: 0;
+}
+
+ul{
+    li{
+        list-style-type: none;
+        width: 70px;
+        margin: 30px;
+        text-align: center;
+    }
+}
+nav{
+    ul{
+        display: flex;
+    }
+}

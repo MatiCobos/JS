@@ -1,0 +1,181 @@
+#carrousel{
+    background-color: black;
+}
+
+#exampleFormControlTextarea1{
+    height: 300px;
+}
+.nombre-blanco {
+    color: white;
+}
+
+h5{
+    background-color: black;
+}
+
+.foto-main {
+    width: 100%;
+    height: auto;
+    margin: 0px !important;
+}
+
+.encabezado{
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+
+}
+
+
+h2{
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+    text-align: center;
+}
+
+.noticia-principal{
+    background-color: black;
+    padding: 20px;
+
+
+
+
+}
+
+.noticia-secundaria{
+    background-color: black;
+    padding: 20px;
+
+}
+
+#carouselExampleCaptions{
+    padding: 20px;
+    background-color: black;
+}
+
+
+.hr {
+    margin: 0rem 0 !important;
+    color: white !important;
+    background-color: currentColor !important;
+    border: 0 !important;
+    opacity: .45 !important
+}
+
+.tamaño {
+    width: 570px;
+    height: 440px;
+}
+
+@media only screen and (max-width: 768px) {
+    header {
+        flex-direction: column;
+
+
+    }
+    .navbar-expand-lg{
+
+       background: linear-gradient(90deg, rgba(121,9,9,1) 0%, rgba(0,0,0,1) 45%);
+    }
+
+    .botonera-main {
+        flex-direction: column;
+
+    }
+
+    footer{
+        background: linear-gradient(90deg, rgba(0,0,0,1) 38%, rgba(121,9,9,1) 98%);
+    }
+
+    .artistas-section-fila-uno{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artistas-section-fila-dos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artistas-section-fila-tres{
+        display: flex;
+        flex-direction: column;
+    }
+    .tamaño{
+        width: 100%;
+        height: auto;
+    }
+    .spotify{
+        flex-direction: column;
+    }
+    .ratio-4x3{
+        margin: 0px 0px 20px 0px !important;
+    }
+    .perfiles{
+        flex-direction: column;
+        text-align: center;
+    }
+    .perfil2{
+        padding: 50px 5px 0px 5px !important;
+    }
+
+}
+
+@media only screen and (max-width: 1024px){
+    header {
+        flex-direction: column;
+
+
+    }
+    .navbar-expand-lg{
+
+       background: linear-gradient(90deg, rgba(121,9,9,1) 0%, rgba(0,0,0,1) 45%);
+    }
+
+    .botonera-main {
+        flex-direction: column;
+
+    }
+
+    footer{
+        background: linear-gradient(90deg, rgba(0,0,0,1) 38%, rgba(121,9,9,1) 98%);
+    }
+
+    .artistas-section-fila-uno{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .artistas-section-fila-dos{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .artistas-section-fila-tres{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .tamaño{
+        width: 100%;
+        height: auto;
+    }
+    .spotify{
+        flex-direction: column;
+
+    }
+    .ratio-4x3{
+        margin: 0px 0px 20px 0px !important;
+    }
+    .perfiles{
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .perfil2{
+        padding: 50px 5px 0px 5px !important;
+    }
+
+}

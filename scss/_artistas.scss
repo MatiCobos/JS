@@ -1,0 +1,87 @@
+.artistas-section-fila-uno{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .fila-uno{
+        margin: 10px;
+        padding: 10px;
+    }
+    p{
+        font-size: 2em;
+    }
+    a{
+        text-decoration: none;
+        color: brown
+    }
+
+
+}
+
+
+.artistas-section-fila-dos{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .fila-dos{
+        margin: 10px;
+        padding: 10px;
+    }
+    p{
+        font-size: 2em;
+    }
+    a{
+        text-decoration: none;
+        color: brown
+    }
+
+}
+
+
+
+.artistas-section-fila-tres{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .fila-tres{
+        margin: 10px;
+        padding: 10px;
+    }
+    p{
+        font-size: 2em;
+    }
+    a{
+        text-decoration: none;
+        color: brown
+    }
+}
+
+
+
+.fondo-artistas{
+    background-color: black;
+}
+
+.encabezado-artistas{
+    margin: 60px 60px 60px;
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+    text-align: center;
+}
+
+.artistas-section-fila-cuatro{
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    .fila-cuatro{
+        margin: 10px;
+        padding: 10px;
+    }
+    p{
+        font-size: 2em;
+    }
+    a{
+        text-decoration: none;
+        color: brown
+    }
+}

@@ -1,0 +1,57 @@
+.encabezado-prensa{
+    color: white;
+    font-weight: 900;
+    font-size: 2em;
+    background-color: black;
+    margin: 0px;
+    text-align: center;
+}
+.prensa{
+    background-color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+
+}
+
+.flex-container-prensa {
+    background-color: black;
+    color: brown;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0px;
+    padding: 10px;
+    border: solid white;
+    text-align: center;
+
+}
+
+/* Formulario */
+
+.form-group {
+    background-color: black;
+    color: white;
+}
+
+.form-control {
+    background-color: black;
+}
+
+.rounded-pill{
+    background-color: black;
+    border: solid white;
+}
+
+.rounded-pill:hover{
+    background-color: brown;
+    color: black;
+    border: solid black;
+}
+
+.btn-light{
+    background-color: brown !important;
+    margin: 10px;
+}

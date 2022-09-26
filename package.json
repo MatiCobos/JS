@@ -1,0 +1,25 @@
+{
+  "name": "proyectofinal",
+  "version": "1.0.0",
+  "description": "Ideamos un nuevo concepto en Prensa y Difusión, construido sobre la base de un trabajo en equipo fuerte, que tiene constantemente el foco puesto en el crecimiento del artista y sus contenidos, dando a conocer el material y cada una de las novedades.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-css": "node-sass --include-path scss scss/prueba.scss css/pruebacss.css",
+    "watch-css": "nodemon -e scss -x \"npm run build-css\""
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "node-sass": "^6.0.1",
+    "nodemon": "^2.0.12"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/MatiCobos/desafioComplementario1.git"
+  },
+  "bugs": {
+    "url": "https://github.com/MatiCobos/desafioComplementario1/issues"
+  },
+  "homepage": "https://github.com/MatiCobos/desafioComplementario1#readme"
+}

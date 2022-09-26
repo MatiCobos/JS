@@ -1,0 +1,53 @@
+.nosotros{
+    background-image: url(../public/img/fondo-nosotros.jpg);
+    background-position: center center;
+    background-size: cover;
+    background-color: black;
+    padding: 20px;
+    .parrafo-nosotros{
+
+        color: white;
+        text-shadow: black 2px 2px;
+    }
+    .encabezado-nosotros{
+        text-shadow: rgb(58, 28, 28) 2px 2px;
+        color: white;
+        font-weight: 900;
+        font-size: 2em;
+        text-align: center;
+        padding: 10px;
+    }
+
+}
+
+.perfiles{
+    display: flex;
+    justify-content: center;
+    .link-nosotros{
+        color: brown !important;
+    }
+    b{
+        color: white;
+    }
+    .titulo-perfil{
+        font-size: 20px;
+        color: white;
+    }
+    .perfil1{
+
+        padding: 50px 5px 0px 0px;
+    }
+    .perfil2{
+        
+        padding: 50px 5px 50px 5px;
+    }
+    .datos{
+        padding: 50px 0px 0px 0px;
+    }
+}
+
+h2{
+    padding: 20px;
+    text-shadow: rgb(58, 28, 28) 2px 2px; ;
+}
+
