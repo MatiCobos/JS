@@ -1,0 +1,6 @@
+[
+    {"id": 1, "name": "Home Shirt", "price": 100, "img": "/public/homeShirt.jpg", "description": "This product will be available soon", "category": "home shirt", "quantity": 1},
+    {"id": 2, "name": "Away Shirt", "price": 100, "img": "/public/awayShirt.jpg", "description": "This product will be available soon", "category": "away shirt", "quantity": 1},
+    {"id": 3, "name": "Pants", "price": 300, "img": "/public/sweatPants.jpg", "description": "This product will be available soon", "category": "pants",  "quantity": 1},
+    {"id": 4, "name": "Jacket", "price": 400, "img": "/public/jacket.jpg", "description": "This product will be available soon", "category": "jacket",  "quantity": 1}
+]
