@@ -5,16 +5,7 @@
     {id: 4, name: "Jacket", price: 400, img: "/public/jacket.jpg", description: "This product will be available soon", category: "jacket",  quantity: 1},
 ]; */
 
-const cart = [];
-
-//Tratando de guardar en el local storage (no me salió, no entendi)
-/* document.addEventListener("DOMContentLoaded", ()=>{
-    if (localStorage.getItem("cart")){
-        cart = JSON.parse(localStorage.getItem("cart"))
-        renderCart()
-    }
-})
- */
+let cart = [];
 
 // Pinto todos los productos en la Home
 fetch('./data.json')
@@ -88,8 +79,7 @@ cartContainer.innerHTML =""
         `
         cartContainer.appendChild(div);
 
-        //Tratando de guardar en el local storage (no me salió, no entendi)
-        //localStorage.setItem("cart", JSON.stringify(cart))
+        localStorage.setItem("cart", JSON.stringify(cart))
     })
     totalPrice.innerText = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
 };
@@ -100,6 +90,7 @@ const deleteItem = (prodId)=>{
     const indice = cart.indexOf(item);
     cart.splice(indice, 1);
     renderCart();
+    
 };
 
 //Vacio el carrito
@@ -112,6 +103,10 @@ deleteButton.addEventListener("click", ()=>{
     'success'
 )
     renderCart();
+
+    //Vacia el carrito en el storage al presionar vaciar carrito
+    localStorage.clear("cart");
+     
 });
 
 
@@ -128,3 +123,10 @@ input.addEventListener('keyup', e => {
     };
 });
 
+//Al recargar la pagina actualiza el carro con los datos del storge
+document.addEventListener('DOMContentLoaded', () => {
+    if (localStorage.getItem('cart')) {
+        cart = JSON.parse(localStorage.getItem('cart'));
+        renderCart();
+    };
+});
