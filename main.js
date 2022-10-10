@@ -1,10 +1,3 @@
-/* const products = [
-    {id: 1, name: "Home Shirt", price: 100, img: "/public/homeShirt.jpg", description: "This product will be available soon", category: "home shirt", quantity: 1},
-    {id: 2, name: "Away Shirt", price: 100, img: "/public/awayShirt.jpg", description: "This product will be available soon", category: "away shirt", quantity: 1},
-    {id: 3, name: "Pants", price: 300, img: "/public/sweatPants.jpg", description: "This product will be available soon", category: "pants",  quantity: 1},
-    {id: 4, name: "Jacket", price: 400, img: "/public/jacket.jpg", description: "This product will be available soon", category: "jacket",  quantity: 1},
-]; */
-
 let cart = [];
 
 // Pinto todos los productos en la Home
@@ -14,13 +7,18 @@ fetch('./data.json')
     const container = document.getElementById("container");
     data.forEach((product) => {
     let card = document.createElement("div");
+    card.classList.add( "col-sm-6", "col-lg-4")
     card.innerHTML = `<div class="card" style="width: 18rem;">
-                        <img src="${product.img}" class="card-img-top" alt="...">
+                        <img src="${product.img}" class="card-img-top">
+                        <hr>
                         <div class="card-body">
                             <h5 class="card-title">${product.name}</h5>
-                            <p>$${product.price}</p>
+                            <div class="price-container">
+                                <p>$${product.price}</p> <p class="through">$${product.before}</p>
+                            </div>
                             <p class="card-text">${product.description}.</p>
-                            <button id="add${product.id}">Add to cart</button>
+                            <hr>
+                            <button type="button" class="btn btn-primary" id="add${product.id}">Add to cart</button>
                         </div>
                     </div>`;
     container.append(card);
@@ -35,32 +33,35 @@ fetch('./data.json')
 
 //Boton agregar al carrito
 const addToCart = (prodId) => {
+    Toastify({
+
+        text: `You added the product to the cart`,
+        position: "right",
+        gravity: "bottom",
+        duration: 3000
+
+    }).showToast();
+
     const exist = cart.some (product => product.id === prodId);
     if (exist){
         const prod = cart.map (product => {
             if (product.id === prodId){
-                product.quantity++   
+                product.quantity++
+                renderCart();
             };
 
         });
     }
 
-        //Así lo tenia antes, pero me decia que products is not defined
-/*         else{
-        const item = products.find ((product) => product.id === prodId);
-        cart.push(item);
-        console.log(cart); 
-    }; */
     else{
         fetch('./data.json')
         .then((resp)=>resp.json())  
         .then((data) => {
         const item = data.find ((product) => product.id === prodId);
-        cart.push(item);;
-        })
-    };
-
-    renderCart();
+        cart.push(item);
+        renderCart();
+        });
+    };   
 };
 
 //Pinto todos los productos en el carrito
@@ -68,18 +69,19 @@ const cartContainer = document.getElementById("cartContainer");
 const totalPrice = document.getElementById("totalPrice");
 
 const renderCart = () =>{
-cartContainer.innerHTML =""
+cartContainer.innerHTML ="";
 
     cart.forEach((product)=>{
         const div = document.createElement("div");
         div.innerHTML = `
+        <img src="${product.img}" class="img-thumbnail">        
             <p>${product.name}</p>
             <p>Quantity: <span id="quantity">${product.quantity}</span></p>
-            <button onclick="deleteItem (${product.id})">Delete</button>
+            <button type="button" class="btn btn-danger" onclick="deleteItem (${product.id})">Delete</button>
         `
         cartContainer.appendChild(div);
 
-        localStorage.setItem("cart", JSON.stringify(cart))
+        localStorage.setItem("cart", JSON.stringify(cart));
     })
     totalPrice.innerText = cart.reduce((acc, product) => acc + product.price * product.quantity, 0);
 };
@@ -98,10 +100,10 @@ const deleteButton = document.getElementById("deleteButton");
 deleteButton.addEventListener("click", ()=>{
     cart.length = 0;
     Swal.fire(
-    'SHOPPING CART',
-    'Your cart is empty. If you see something you would like to add to your bag while shopping, click Add to cart',
-    'success'
-)
+        'SHOPPING CART',
+        'Your cart is empty. If you see something you would like to add to your bag while shopping, click Add to cart',
+        'success'
+    );
     renderCart();
 
     //Vacia el carrito en el storage al presionar vaciar carrito
@@ -109,6 +111,15 @@ deleteButton.addEventListener("click", ()=>{
      
 });
 
+//Boton Checkout
+const checkOutButton = document.getElementById("Checkout");
+checkOutButton.addEventListener("click", ()=>{
+        Swal.fire(
+        'SHOPPING CART',
+        'Your purchase is being processed, you will soon receive the instructions',
+        'success'
+    );
+});
 
 //Barra de busqueda
 let input = document.getElementById("search");
@@ -123,7 +134,7 @@ input.addEventListener('keyup', e => {
     };
 });
 
-//Al recargar la pagina actualiza el carro con los datos del storge
+//Al recargar la pagina actualiza el carro con los datos del storage
 document.addEventListener('DOMContentLoaded', () => {
     if (localStorage.getItem('cart')) {
         cart = JSON.parse(localStorage.getItem('cart'));

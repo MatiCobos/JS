@@ -1,6 +1,8 @@
 [
-    {"id": 1, "name": "Home Shirt", "price": 100, "img": "/public/homeShirt.jpg", "description": "This product will be available soon", "category": "home shirt", "quantity": 1},
-    {"id": 2, "name": "Away Shirt", "price": 100, "img": "/public/awayShirt.jpg", "description": "This product will be available soon", "category": "away shirt", "quantity": 1},
-    {"id": 3, "name": "Pants", "price": 300, "img": "/public/sweatPants.jpg", "description": "This product will be available soon", "category": "pants",  "quantity": 1},
-    {"id": 4, "name": "Jacket", "price": 400, "img": "/public/jacket.jpg", "description": "This product will be available soon", "category": "jacket",  "quantity": 1}
+    {"id": 1, "name": "Home Shirt", "price": 100, "before": 150, "img": "/public/homeShirt.jpg", "description": "Home Shirt season 2022/2023", "category": "home shirt", "quantity": 1},
+    {"id": 2, "name": "Away Shirt", "price": 100, "before": 150, "img": "/public/awayShirt.jpg", "description": "Away Shirt season 2022/2023", "quantity": 1},
+    {"id": 3, "name": "Pants", "price": 300, "before": 350 , "img": "/public/sweatPants.jpg", "description": "Tiro 21 Sweat Pants", "category": "pants",  "quantity": 1},
+    {"id": 4, "name": "Jacket", "price": 400,"before": 450, "img": "/public/jacket.jpg", "description": "Condivo Light Padded Jacket", "category": "jacket",  "quantity": 1},
+    {"id": 5, "name": "Training Polo", "price": 250,"before": 350, "img": "/public/trainingPolo.jpg", "description": "Tiro 21 Polo Shirt", "category": "jacket",  "quantity": 1},
+    {"id": 6, "name": "Walkout Jacket", "price": 370, "before": 450, "img": "/public/walkoutJacket.jpg", "description": "Innovation Logo FFC Tech Hybrid", "category": "jacket",  "quantity": 1}
 ]
